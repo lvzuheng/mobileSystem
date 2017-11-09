@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="css/css_x320/manager_css_x320.css" />
+	<link rel="stylesheet" media="screen and (min-width: 320px)" href="css/css_x320/manager_css_x320.css" />
+	<link rel="stylesheet" media="screen and (min-width: 480px)" href="css/css_x480/manager_css_x480.css" />
+	<link rel="stylesheet" media="screen and (min-width: 640px)" href="css/css_x640/manager_css_x640.css" />
+	<link rel="stylesheet" media="screen and (min-width: 768px)" href="css/css_x768/manager_css_x768.css" />
+	<script type="text/javascript" src="js/swiper/swiper.min.js" ></script>
+	<script type="text/javascript" src="js/server/manager.js" ></script>
+	<script type="text/javascript" src="js/utils/CookieUtil.js" ></script>
+	<script type="text/javascript" src="js/server/config.js" ></script>
+	<script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js" ></script>
+	<script type="text/javascript" src="js/jquery/jquery.cookie.js" ></script>
+	
+	<body onload="init()">
+		
+		<div id="frame" class="frame">
+			<div id="div_body" class="div-body">
+				<div  class="swiper-container" style=" height: 100%;">
+					<iframe id="iframe" class=" iframe" src="Terminal.html"></iframe>
+				</div>
+			</div>
+			<div id="div_foot" class="div-foot">
+				<div id="div_ul" class="div-ul">
+					<hr style="margin: 0;" />
+					<ul id="index_ul" class="index-ul">
+						<li onclick="Terminal_event()" style="font-family：FangSong"><strong>设备管理</strong></li>
+						<li onclick="Organization_event()"><strong>机构管理</strong></li>
+						<li onclick="Operator_event()"><strong>操作员管理</strong></li>
+						<li onclick="Log_event()"><strong>日志</strong></li>
+					</ul>
+					<hr style="margin: 0;" />
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

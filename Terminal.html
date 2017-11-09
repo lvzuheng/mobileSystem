@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="css/css/dialog.css" />
+	<link rel="stylesheet" href="css/css_x320/terminal_css_x320.css" />
+	<link rel="stylesheet" media="screen and (min-width: 320px)" href="css/css_x320/terminal_css_x320.css" />
+	<link rel="stylesheet" media="screen and (min-width: 480px)" href="css/css_x480/terminal_css_x480.css" />
+	<link rel="stylesheet" media="screen and (min-width: 640px)" href="css/css_x640/terminal_css_x640.css" />
+	<link rel="stylesheet" media="screen and (min-width: 768px)" href="css/css_x768/terminal_css_x768.css" />
+	<link rel="stylesheet" href="css/css_utils/loading_turn.css" />
+	<link rel="stylesheet" href="css/css_utils/loading_pianoKey.css" />
+	
+	<script type="text/javascript" src="js/server/config.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/utils/CookieUtil.js"></script>
+	<script type="text/javascript" src="js/server/terminal_js.js"></script>
+	<script type="text/javascript" src="js/iscroll/iscroll.js"></script>
+	<script type="text/javascript" src="js/iscroll/iscroll-infinite.js"></script>
+	<script type="text/javascript" src="js/server/terminal_event_js.js"></script>
+	<script type="text/javascript" src="js/dialog/dialog.js"></script>
+
+	<body onload="init()">
+		<div id="frame" class="frame">
+			<div id="wrapper" class="wrapper-div">
+				<div id="div_body" class="div-body">
+					<div id="div_scroll_pulldown" class="loading-turn"></div>
+					<div id="div_head" class="div-head">
+						<p style="margin: 0; padding: 0; float: left;"><b style="font-size: 18px;">设备</b>/列表</p>
+						<div id="div_index" class="div-index">
+							<button id="cancel_search" class="li-index-search" onclick="cancel_search()" style="display: none; width: auto;">&#9990取消查询结果</button>
+							<button id="button_index_add" class="li-index-add" onclick="increaseUser_event()">新增</button>
+							<button id="button_index_search" class="li-index-search" onclick="searchUser_event()">查询</button>
+						</div>
+						<hr style="margin:  0;float: left;width: 100%;" />
+					</div>
+					
+					<table id="wrapper_table" class="wrapper-table"></table>
+					<div id="div_scroll_pullup" class="loading-pianokey">
+						<div class="rect1"></div>
+						<div class="rect2"></div>
+						<div class="rect3"></div>
+						<div class="rect4"></div>
+						<div class="rect5"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="div_add" style="display: none;">
+				<div id="div_add_input">
+					用户号：<input type="text" id="input_add_termianlId" />
+					<p id="p_hadTerminalId" style="font-size:14px;margin:0;color: red; visibility: hidden;">存在用户名</p>
+					用户名：<input type="text" id="input_add_userName" />
+					<p></p>
+					机构名：
+					<select id="select_add"></select>
+				</div>
+			</div>
+			<div id="div_search" style="display: none;">
+				<div id="div_search_input">
+					<input id="input_search_value" type="text" placeholder="用户号/用户名/机构名称" style="margin: 0 auto;" />
+					<p></p>
+				</div>
+			</div>
+			<div id="div_editor" style="display: none;">
+				<div id="div_editor_input">
+					用户号：<input type="text" id="input_editor_terminalId" />
+					<p id="editor_p_hadTerminalId" style="font-size:14px;margin:0;color: red; visibility: hidden;">存在用户名</p>
+					用户名：<input type="text" id="input_editor_userName" />
+					<p></p>
+					机构名：
+					<select id="select_editor_org"></select>
+				</div>
+			</div>
+			<!--<div id="div_notice" class="div-notice">没有更多用户了</div>-->
+		</div>
+	</body>
+
+</html>

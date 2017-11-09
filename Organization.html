@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="css/css_utils/dialog.css" />
+	<link rel="stylesheet" href="css/css_x320/organization_css_x320.css" />
+	<link rel="stylesheet" media="screen and (min-width: 320px)" href="css/css_x320/organization_css_x320.css" />
+	<link rel="stylesheet" media="screen and (min-width: 480px)" href="css/css_x480/organization_css_x480.css" />
+	<link rel="stylesheet" media="screen and (min-width: 640px)" href="css/css_x640/organization_css_x640.css" />
+	<link rel="stylesheet" media="screen and (min-width: 768px)" href="css/css_x768/organization_css_x768.css" />
+	<link rel="stylesheet" href="css/css_utils/loading_circle.css" />
+	<link rel="stylesheet" href="css/css_utils/loading_square.css" />
+	
+	<script type="text/javascript" src="js/server/config.js" ></script>
+	<script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/utils/CookieUtil.js"></script>
+	<script type="text/javascript" src="js/iscroll/iscroll.js"></script>
+	<script type="text/javascript" src="js/iscroll/iscroll-infinite.js"></script>
+	<script type="text/javascript" src="js/server/organziation_event_js.js" ></script>
+	<script type="text/javascript" src="js/server/organization_js.js" ></script>
+	<script type="text/javascript" src="js/dialog/dialog.js" ></script>
+	
+	<body onload="init()">
+		<div id="frame" class="frame">
+			<div id="wrapper" class="wrapper-div">
+				<div id="div_body" class="div-body">
+					<div id="div_scroll_pulldown" class="loading-circle">
+						  <div class="double-bounce1"></div>
+  						<div class="double-bounce2"></div>
+					</div>
+					<div id="div_head" class="div-head">
+						<p style="margin: 0;padding: 0; float: left;"><b style="font-size: 18px;">机构</b>/列表</p>
+						<div id="div_index" class="div-index">
+								<button id="cancel_search"  onclick="cancel_search()" style="display: none;">&#9990取消查询结果</button>
+								<button id="button_index_add" class="li-index-add" onclick="increaseOrg_event()">新增</button>
+								<button id="button_index_search" class="li-index-search" onclick="searchOrg_event()">查询</button>
+						</div>
+					</div>
+						<hr style="margin:  0;padding: 0; float: left; width: 100%;" />
+					<table id="wrapper_table" class="wrapper-table"></table>
+					<div id="div_scroll_pullup" class="loading-square">
+						  <div class="cube1"></div>
+  							<div class="cube2"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="div_add" style="display: none;" >
+				<div id="div_add_input" >
+					机构名：&nbsp;&nbsp;&nbsp;<input type="text" id="input_add_orgName" />
+					<p id="p_hadTerminalId" style="font-size:14px;margin:0;color: red; visibility: hidden;">存在用户名</p>
+					上级机构：<select id="select_parent"  class="search—select"></select>
+					<p></p>
+				</div>
+			</div>
+			<div id="div_search" style="display: none;" >
+				<div id="div_search_input" >
+					<input id="input_search_value" type="text" placeholder="机构名称"/>
+				</div>
+			</div>
+			<div id="div_editor" style="display: none;" >
+				<div id="div_editor_input" >
+					&emsp;&emsp;&emsp;id:&emsp;<input type="text" readonly="readonly" id="input_editor_id" style="width: 30px"/><br />
+					<p></p>
+					&emsp;机构名：<input type="text" id="input_editor_orgName" />
+					<p id="editor_p_hadTerminalId" style="font-size:14px;margin:0;color: red; visibility: hidden;">存在用户名</p>
+					上级机构：<select id="select_editor_org"></select>
+				</div>
+			</div>
+			<!--<div id="div_notice" class="div-notice">没有更多用户了</div>-->
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="css/css_utils/dialog.css" />
+	<link rel="stylesheet" href="css/css_x320/log_css_x320.css" />
+	<link rel="stylesheet" media="screen and (min-width: 320px)" href="css/css_x320/log_css_x320.css" />
+	<link rel="stylesheet" media="screen and (min-width: 480px)" href="css/css_x480/log_css_x480.css" />
+	<link rel="stylesheet" media="screen and (min-width: 640px)" href="css/css_x640/log_css_x640.css" />
+	<link rel="stylesheet" media="screen and (min-width: 768px)" href="css/css_x768/log_css_x768.css" />
+	<link rel="stylesheet" href="css/css_utils/loading_circle1.css" />
+	<link rel="stylesheet" href="css/css_utils/loading_circle2.css" />
+
+	<script type="text/javascript" src="js/server/config.js"></script>
+	<script type="text/javascript" src="js/server/log_js.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/utils/CookieUtil.js"></script>
+	<script type="text/javascript" src="js/iscroll/iscroll.js"></script>
+	<script type="text/javascript" src="js/iscroll/iscroll-infinite.js"></script>
+	<script type="text/javascript" src="js/server/log_event_js.js"></script>
+	<script type="text/javascript" src="js/dialog/dialog.js"></script>
+
+	<body onload="init()">
+		<div id="frame" class="frame">
+			<div id="wrapper" class="wrapper-div">
+				<div id="div_body" class="div-body">
+					<div id="div_scroll_pulldown" class="loading-circle1"></div>
+					<div id="div_head" class="div-head">
+						<p style="margin: 0;padding: 0; float: left;"><b style="font-size: 18px;">日志</b>/列表</p>
+						<div id="div_index" class="div-index">
+							<button id="cancel_search" class="li-index-search" onclick="cancel_search()" style="display: none; width: auto;">&#9990取消查询结果</button>
+							<button id="button_index_search" class="li-index-search" onclick="searchLog_event()">查询</button>
+						</div>
+					</div>
+					<hr style="margin:  0;padding: 0; float: left; width: 100%;" />
+					<table id="wrapper_table" class="wrapper-table"></table>
+					<div id="div_scroll_pullup" class="loading-circle2">
+						<div class="dot1"></div>
+						<div class="dot2"></div>
+					</div>
+				</div>
+			</div>
+			<div id="div_search" class="div-search">
+				<div id="div_search_input" class="div-search-input">
+					起始时间：<input id="input_search_start" type="date" />
+					<p></p>
+					终止时间：<input id="input_search_end" type="date" />
+					<p></p>
+				</div>
+			</div>
+			<!--<div id="div_notice" class="div-notice">没有更多用户了</div>-->
+		</div>
+	</body>
+
+</html>

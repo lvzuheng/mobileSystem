@@ -1,0 +1,168 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.frame {
+	height: 99%;
+	width: 99%;
+	margin: 0 auto;
+	min-width: 300px;
+	overflow: hidden;
+	position: relative;
+}
+
+.div-head {
+	width: 100%;
+	/*border: solid 1px red;*/
+	position: static;
+}
+
+.div-head {
+	color: royalblue;
+}
+.div-index{
+	float: right;
+	/*background: slategrey;*/
+
+}
+.div-index>button{
+	outline: none;
+	color: white;
+	border: 1px solid papayawhip;
+	background: slategrey;
+	margin: 0;
+}
+
+
+.div-scroll-pulldown {
+	margin: 0 auto;
+	width: 90%;
+	text-align: center;
+	background-color: paleturquoise;
+	/*color: coral;*/
+	font-size: 24px;
+	height: 40px;
+	line-height: 40px;
+	display: none;
+}
+
+.div-scroll-pullup {
+	margin: 0 auto;
+	width: 90%;
+	text-align: center;
+	background-color: paleturquoise;
+	/*color: coral;*/
+	font-size: 24px;
+	height: 40px;
+	line-height: 40px;
+	display: none;
+}
+
+li:hover,
+button:hover,
+input:hover {
+	cursor: pointer;
+}
+
+.div-body {
+	/*float: left;*/
+	/*border: none;*/
+	margin: 0 0 0 0;
+	height: auto;
+	min-height: 100.25%;
+}
+
+
+
+.wrapper-div {
+	height: 100%;
+}
+
+.wrapper-table {
+	font-size: 14px;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	/*min-height: 80%;*/
+}
+
+.div-notice {
+	text-align: center;
+	padding: 10px;
+	top: 80%;
+	left: 25%;
+	z-index: 9999;
+	width: 50%;
+	font-size: 20px;
+	position: absolute;
+	background-color: white;
+	ilter: alpha(opacity=90);
+	/* ie 有效*/
+	-moz-opacity: 0.9;
+	/* Firefox  有效*/
+	opacity: 0.9;
+	/* 通用，其他浏览器  有效*/
+	border-radius: 30px;
+	display: none;
+}
+
+.wrapper-table tr:nth-of-type(odd) {
+	background-color:#F0FFFF;
+}
+
+
+.wrapper-table tr:nth-of-type(even) {
+	background-color:#C6E2FF;
+}
+
+.wrapper-table tr:nth-of-type(1){ 
+	background-color:mediumaquamarine;
+}
+	
+.wrapper-table button {
+	border: none;
+	outline: none;
+	background-color:#FFEC8B;
+}
+
+.wrapper-table button:hover {
+	border: none;
+	outline: none;
+	background-color:#FFB90F;
+}
+
+.wrapper-table button:active {
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease;
+	background-color:#EEAEEE;
+}
+
+.div-index>button:hover {
+	background-color: #CCEA9F;
+}
+
+.div-index>button:active {
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease;
+	background-color: skyblue;
+}
+
+
+select{
+	 border: solid 1px gainsboro;
+	 background-color: gainsboro;
+	 outline: none;
+	  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+	 width: 60%;
+}
+option:s{
+	background-color: red;
+}
