@@ -5,6 +5,14 @@ body,html{
 	height: 98%;
 	width: 100%;
 }
+.loading-frame{
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	background: white;
+	z-index:1;
+	position: fixed;
+}
 
 .frame{
 	margin: 0 auto;

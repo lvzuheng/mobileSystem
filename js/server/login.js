@@ -43,6 +43,7 @@ function login_event() {
 		"userName": $("#login_username").val(),
 		"password": $.md5($("#login_password").val())
 	};
+	console.log("aaaaa:"+uri);
 	$.ajax({
 		url: uri + "loginToManager",
 		type: "get",
@@ -58,7 +59,7 @@ function login_event() {
 			}
 		},
 		error: function(result) {
-			console.log(JSON.parse(result));
+			console.log(result);
 			return null;
 		}
 	});

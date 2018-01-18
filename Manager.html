@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -9,18 +10,31 @@
 	<link rel="stylesheet" media="screen and (min-width: 480px)" href="css/css_x480/manager_css_x480.css" />
 	<link rel="stylesheet" media="screen and (min-width: 640px)" href="css/css_x640/manager_css_x640.css" />
 	<link rel="stylesheet" media="screen and (min-width: 768px)" href="css/css_x768/manager_css_x768.css" />
-	<script type="text/javascript" src="js/swiper/swiper.min.js" ></script>
-	<script type="text/javascript" src="js/server/manager.js" ></script>
-	<script type="text/javascript" src="js/utils/CookieUtil.js" ></script>
-	<script type="text/javascript" src="js/server/config.js" ></script>
-	<script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js" ></script>
-	<script type="text/javascript" src="js/jquery/jquery.cookie.js" ></script>
-	
+	<link rel="stylesheet" href="css/css_utils/loading_pianoKey.css" />
+	<script type="text/javascript" src="js/swiper/swiper.min.js"></script>
+	<script type="text/javascript" src="js/server/manager.js"></script>
+	<script type="text/javascript" src="js/utils/CookieUtil.js"></script>
+	<script type="text/javascript" src="js/server/config.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.cookie.js"></script>
+
 	<body onload="init()">
-		
+		<div id="loading_frame" class="loading-frame"  style="margin:0 auto;">
+			<div id="loading_pianokey" class="loading-pianokey" style="margin-top:50%;display: block; width:100px;">
+				<div class="rect1"></div>
+				<div class="rect2"></div>
+				<div class="rect3"></div>
+				<div class="rect4"></div>
+				<div class="rect5"></div>
+				<div class="rect4"></div>
+				<div class="rect3"></div>
+				<div class="rect2"></div>
+				<div class="rect1"></div>
+			</div>
+		</div>
 		<div id="frame" class="frame">
 			<div id="div_body" class="div-body">
-				<div  class="swiper-container" style=" height: 100%;">
+				<div class="swiper-container" style=" height: 100%;">
 					<iframe id="iframe" class=" iframe" src="Terminal.html"></iframe>
 				</div>
 			</div>

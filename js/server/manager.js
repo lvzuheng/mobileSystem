@@ -30,9 +30,11 @@ var mySwiper = new Swiper('.swiper-container',{
 
 function init() {
 	if($.cookie("userName") == null || $.cookie("passWord") == null) {
+		console.log("调回");
 		location.href = "Login.html";
 		return;
 	}
+	$("#loading_frame")[0].style.visibility = "hidden";
 	userName = $.cookie("userName");
 	passWord = $.cookie("passWord");
 	init_windowSize();
