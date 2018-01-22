@@ -43,6 +43,8 @@ function init_data(start, end) {
 		async: true,
 		success: function(result) {
 			$('#wrapper_table').html("");
+
+			console.log(result)
 			orgList = JSON.parse(result);
 			init_OrgList(JSON.parse(result));
 			$("#div_scroll_pullup")[0].style.display = "none";
